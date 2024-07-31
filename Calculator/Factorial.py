@@ -14,3 +14,5 @@ def factorial():
     for x in range(1, num + 1):
         fact = fact * x
     print(f'The factorial of {num} = {fact}')
+
+power()

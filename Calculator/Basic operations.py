@@ -1,4 +1,4 @@
-def arithmetic_operations():
+def basic_operations():
     num1 = float(input('Enter first number: '))
     num2 = float(input('Enter second number: '))
     operator = input('Enter an operator (+, -, *:, /): ')
