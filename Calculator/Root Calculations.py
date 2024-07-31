@@ -10,6 +10,3 @@ def root():
     elif num2 > 2:
         result = num1 ** (1 / num2)
         print(f'The {num2}th root of {num1} = {result}')
-
-
-root()
