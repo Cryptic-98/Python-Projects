@@ -3,8 +3,8 @@ import math
 
 def basic_operations():
     num1 = float(input('Enter first number: '))
-    num2 = float(input('Enter second number: '))
     operator = input('Enter an operator (+, -, *:, /): ')
+    num2 = float(input('Enter second number: '))
     while operator != '+' and operator != '-' and operator != '*' and operator != '/':
         print('Invalid entry')
         operator = input('Enter an operator (+, -, *, /): ')
@@ -98,6 +98,7 @@ def base():
 
 
 print('Welcome to Simple Calculator')
+print('Disclaimer: It will crash if you enter invalid values [sometimes]')
 quitOrCon = input('Would you like to (q)uit or continue (press key to continue)? ')
 while quitOrCon != 'q':
     print("1. Basic operations")
@@ -108,7 +109,7 @@ while quitOrCon != 'q':
     print("6. Logarithm")
     print("7. Logarithm Base10")
     print('Q to quit')
-    '\n'
+    '\n\n'
     option = input("Enter option: ")
 
     if option.lower() == 'q':
