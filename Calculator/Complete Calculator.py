@@ -11,15 +11,19 @@ def basic_operations():
     if operator == '+':
         addition = num1 + num2
         print(f'{num1} + {num2} = {addition}')
+        '\n\n'
     elif operator == '-':
         subtraction = num1 - num2
         print(f'{num1} - {num2} = {subtraction}')
+        '\n\n'
     elif operator == '*':
         multiplication = num1 * num2
         print(f'{num1} × {num2} = {multiplication}')
+        '\n\n'
     else:
         division = num1 / num2
         print(f'{num1} ÷ {num2} = {division}')
+        '\n\n'
 
 
 def power():
@@ -27,6 +31,7 @@ def power():
     num2 = float(input('Enter exponent: '))
     answer = num1 ** num2
     print(f'{num1} to the power of {num2} = {answer}')
+    '\n\n'
 
 
 def factorial():
@@ -38,6 +43,7 @@ def factorial():
     for x in range(1, num + 1):
         fact = fact * x
     print(f'The factorial of {num} = {fact}')
+    '\n\n'
 
 
 def root():
@@ -46,9 +52,11 @@ def root():
     if num2 == 2:
         result = math.sqrt(num1)
         print(f'The square root of {num1} = {result}')
+        '\n\n'
     elif num2 > 2:
         result = num1 ** (1 / num2)
         print(f'The {num2}th root of {num1} = {result}')
+        '\n\n'
 
 
 def trigonometry():
@@ -60,12 +68,15 @@ def trigonometry():
     if function == 's' or function == 'S':
         answer = math.sin(num1)
         print(f'sin({num1}) = {answer}')
+        '\n\n'
     elif function == 'c' or function == 'C':
         answer = math.cos(num1)
         print(f'cos({num1}) = {answer}')
+        '\n\n'
     else:
         answer = math.tan(num1)
         print(f'tan({num1}) = {answer}')
+        '\n\n'
 
 
 def log():
@@ -75,48 +86,56 @@ def log():
         print('Invalid Entry')
         num = float(input('Enter number: '))
     else:
-        return f'Answer = {answer}'
+        print(f'Answer = {answer}')
+        '\n\n'
 
 
 def base():
     num = float(input('Enter number: '))
     answer = math.log10(num)
-    return f'Answer = {answer}'
+    print(f'Answer = {answer}')
+    '\n\n'
 
 
-print("1. Basic operations")
-print("2. Power function")
-print("3. Factorial")
-print("4. Root calculations")
-print("5. Trigonometric functions")
-print("6. Logarithm")
-print("7. Logarithm Base10")
-option = input("Enter option: ")
-'\n\n'
-quitCal = input('Press q to quit... ')
-while option != "1" and option != "2" and option != "3" and option != "4" and option != "5" and option != "6" and option != "7" and quitCal == "q" :
-    print('Invalid option')
+print('Welcome to Simple Calculator')
+quitOrCon = input('Would you like to (q)uit or continue (press key to continue)? ')
+while quitOrCon != 'q':
     print("1. Basic operations")
     print("2. Power function")
     print("3. Factorial")
     print("4. Root calculations")
     print("5. Trigonometric functions")
     print("6. Logarithm")
-    print("7. Logarithm Base10\n\n")
+    print("7. Logarithm Base10")
+    print('Q to quit')
+    '\n'
     option = input("Enter option: ")
 
-if option == "1":
-    basic_operations()
-elif option == "2":
-    power()
-elif option == "3":
-    factorial()
-elif option == "4":
-    root()
-elif option == "5":
-    trigonometry()
-elif option == "6":
-    log()
-else:
-    base()
-input()
+    if option.lower() == 'q':
+        break
+    else:
+        while option != "1" and option != "2" and option != "3" and option != "4" and option != "5" and option != "6" and option != "7":
+            print('Invalid option')
+            print("1. Basic operations")
+            print("2. Power function")
+            print("3. Factorial")
+            print("4. Root calculations")
+            print("5. Trigonometric functions")
+            print("6. Logarithm")
+            print("7. Logarithm Base10\n\n")
+            option = input("Enter option: ")
+            '\n'
+        if option == "1":
+            basic_operations()
+        elif option == "2":
+            power()
+        elif option == "3":
+            factorial()
+        elif option == "4":
+            root()
+        elif option == "5":
+            trigonometry()
+        elif option == "6":
+            log()
+        elif option == "7":
+            base()
