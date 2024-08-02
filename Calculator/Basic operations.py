@@ -1,8 +1,8 @@
 def basic_operations():
     num1 = float(input('Enter first number: '))
-    num2 = float(input('Enter second number: '))
     operator = input('Enter an operator (+, -, *:, /): ')
-    while operator != '+' or operator != '-' or operator != '*' or operator != '/':
+    num2 = float(input('Enter second number: '))
+    while operator != '+' and operator != '-' and operator != '*' and operator != '/':
         print('Invalid entry')
         operator = input('Enter an operator (+, -, *, /): ')
     if operator == '+':
@@ -15,6 +15,11 @@ def basic_operations():
         multiplication = num1 * num2
         print(f'{num1} × {num2} = {multiplication}')
     else:
+        while num2 == 0:
+            print(f'Cannot divide {num2}')
+            num2 = float(input('Enter new number: '))
         division = num1 / num2
         print(f'{num1} ÷ {num2} = {division}')
 
+
+basic_operations()

@@ -21,6 +21,9 @@ def basic_operations():
         print(f'{num1} × {num2} = {multiplication}')
         '\n\n'
     else:
+        while num2 == 0:
+            print(f'Cannot divide {num2}')
+            num2 = float(input('Enter new number: '))
         division = num1 / num2
         print(f'{num1} ÷ {num2} = {division}')
         '\n\n'
@@ -37,8 +40,8 @@ def power():
 def factorial():
     num = int(input('Enter a number to be factorized: '))
     fact = 1
-    while num > 2:
-        print('Invalid Entry: factor of 0 does not exist')
+    while num < 0:
+        print('Invalid Entry: factor of number less/ equals to 0 does not exist')
         num = int(input('Enter a number to be factorized: '))
     for x in range(1, num + 1):
         fact = fact * x
@@ -82,12 +85,8 @@ def trigonometry():
 def log():
     num = float(input('Enter number: '))
     answer = math.log(num)
-    while num < 1:
-        print('Invalid Entry')
-        num = float(input('Enter number: '))
-    else:
-        print(f'Answer = {answer}')
-        '\n\n'
+    print(f'Answer = {answer}')
+    '\n\n'
 
 
 def base():
