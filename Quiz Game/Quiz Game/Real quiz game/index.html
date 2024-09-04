@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz game</title>
+    <script>
+        alert('Welcome to the quiz game');
+
+
+        // Question 1
+        confirm('What is the powerhouse of the cell?');
+        var questionOne = prompt('1. Ribosome, 2. Nucleus, 3. Mitochondria, 4.Reticulum');
+        questionOne = Number(questionOne);
+
+
+        if (questionOne == 1) {
+            alert('Wrong!');
+        } else if(questionOne == 2) {
+            alert('Wrong!');
+        } else if (questionOne == 3) {
+            alert('Correct!');
+        } else if (questionOne == 4){
+            alert('Wrong!');
+        } else {
+            alert("I see 4 options, I don't know what you see. ¯\\_(ツ)_/¯")
+        }
+
+        // Question 2
+        confirm('Who wrote the play "Romeo and Juliet"?');
+        var questionTwo = prompt('Answer: ');
+        questionTwo = questionTwo.trim().charAt(0).toUpperCase() + questionTwo.trim().slice(1).toLowerCase();
+        switch (questionTwo) {
+            case 'William shakespeare':
+                alert('Correct!');
+                break;
+            default:
+                alert('Wrong!');
+                break;
+        }
+
+        // Question 3
+        confirm('Which sport is Micheal Jordan most well know for?');
+        var questionThree = prompt('1. Baseball, 2. English Football, 3. Golf, 4. Basketball');
+        questionThree = Number(questionThree);
+
+
+        if (questionThree == 1) {
+            alert('Wrong!');
+        } else if (questionThree == 2) {
+            alert('Wrong!');
+        } else if (questionThree == 3) {
+            alert('Wrong!');
+        } else if (questionThree == 4) {
+            alert('Correct!');
+        } else {
+            alert("I see 4 options, I don't know what you see. ¯\\_(ツ)_/¯");
+        }
+
+        // Question 4
+        confirm('What is the tallest mountain?');
+        var questionFour = prompt('Answer: ');
+        questionFour = questionFour.trim().charAt(0).toUpperCase() + questionFour.trim().slice(1).toLowerCase();
+        
+
+        switch (questionFour) {
+            case 'Mount everest':
+                alert('Correct!');
+                break;
+            default:
+                alert('Wrong!');
+                break;
+        }
+
+        // Question 5
+        confirm('Who was Kendrick Lamar beefing against?');
+        var questionFive = prompt('1. Drake, 2. A$ap Rocky, 3. J. Cole, 4. Jay-Z');
+        questionFive = Number(questionFive);
+
+
+        if (questionFive == 1) {
+            alert('Correct!');
+        } else if (questionFive == 2) {
+            alert('Wrong!');
+        } else if (questionFive == 3) {
+            alert('Wrong!');
+        } else if (questionFive == 4) {
+            alert('Wrong!');
+        } else {
+            alert("I see 4 options, I don't know what you see. ¯\\_(ツ)_/¯");
+        }
+
+        //Result
+        document.write('<h2>Corrections:</h2>')
+        if (questionOne !== 3) {
+            document.write('Question 1:<br> The correct answer is option 3 - "Mitochondria".<br><br>');
+        }
+        if (questionTwo !== 'William shakespeare' ) {
+            document.write('Question 2:<br>The correct answer is "William Shakespeare".<br><br>');
+        }
+        if (questionThree !== 4) {
+            document.write('Question 3:<br>The correct answer is option 4 - "Basketball".<br><br>');
+        }
+        if (questionFour != 'Mount everest') {
+            document.write('Question 4:<br>The correct answer is "Mount Everest".<br><br>');
+        }
+        if (questionFive !== 1) {
+            document.write('Question 5:<br>The correct answer is option 1 - "Drake".<br><br>');
+        }
+        document.write('<p>(If you see nothing, all answers were correct.)<p>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
